@@ -27,7 +27,7 @@ The scripts are organized by results to facilitate reproducibility. Each folder 
 
 For example:
 - `code/Result1/` contains scripts for the complete analysis and visualizations of the Result "Dissecting transregional cellular composition independent and joint-triggering epileptic effects".
-- `code/Figure2/` contains scripts for the complete analysis and visualizations of the Result "Excitatory neurons exhibit highly active state in separate epileptic regions".
+- `code/Result2/` contains scripts for the complete analysis and visualizations of the Result "Excitatory neurons exhibit highly active state in separate epileptic regions".
 - Subsequent folders correspond to the remaining results.
 
 Users can follow these scripts to reproduce the results step by step.
