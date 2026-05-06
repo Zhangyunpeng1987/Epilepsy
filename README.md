@@ -83,8 +83,12 @@ Epilepsy/
 
 The datasets used in this study are publicly available:
 
-- The data that support the findings of this study are openly available in GEO at GSE160189 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160189) and GitHub (https://github.com/khodosevichlab/Epilepsy19). 
-- Bulk RNA-seq datasets analyzed in this study, including GSE256068 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE256068), GSE139914 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139914), and GSE140393 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140393), were sourced from the Gene Expression Omnibus (GEO) database.
+- The data that support the findings of this study are openly available in 
+- GEO at GSE160189 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160189) and GitHub (https://github.com/khodosevichlab/Epilepsy19). 
+- Bulk RNA-seq datasets analyzed in this study were sourced from the Gene Expression Omnibus (GEO) database, including 
+- GSE256068 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE256068), 
+- GSE139914 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139914)
+- GSE140393 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140393), 
 
 Due to file size limitations, raw datasets are not included in this repository.
 
