@@ -1,44 +1,34 @@
-# NSCLC-DMSP.sig
+# Epilepsy
 
 ## Overview
 
 This repository provides the R code used in the study:
 
-"Coordinated multicellular immune programs and drug targets revealed by
-single-cell analysis in driver-mutated NSCLC"
+"Uncovering the key circuit FOSL2/FOS/EGR3/EGR1 contributing to hyperexcitability of excitatory neurons in epileptic temporal cortex and hippocampus"
 
-The project aims to systematically characterize tumor immune
-microenvironment (TIME) heterogeneity in driver-mutated non-small cell
-lung cancer (NSCLC) and to construct a prognostic model (DMSP.sig).
+Epilepsy is mainly characterized by spontaneous seizures caused by hyperactive neural circuits. To delineate the celltype-specific mechanisms underlying neuronal hyperexcitability, we resolve the hyperexcitability of excitatory neurons across epileptic human brain transfoci at single-cell resolution to identify key drivers and diagnostic signatures.
 
 ------------------------------------------------------------------------
 
-## Main Analyses Included
+## Main Results
 
--   Single-cell RNA-seq integration (Seurat + harmony)
--   Cell type annotation and subclustering
--   TIME module identification (CM1-CM5)
--   Differential expression and enrichment analysis
--   Gene set scoring
--   Cancer cell state analysis (copykat + infercnv)
--   TF activity (decoupleR)
--   Cell-cell communication (CellChat)
--   Metabolic activity analysis (scMetabolism)
--   Survival analysis (TCGA)
--   Prognostic model construction (LASSO Cox)
--   Immune infiltration analysis
--   Drug sensitivity prediction
+-   Dissecting transregional cellular composition independent and joint-triggering epileptic effects
+-   Excitatory neurons exhibit highly active state in separate epileptic regions
+-   Excitatory neurons exert hyperactive influence in epileptic human temporal cortex and hippocampus
+-   Glial cells mediate cellular junction assembly and synaptic organization functions along the hippocampal anterior and posterior axis
+-   Revealing circuit FOSL2/FOS/EGR3/EGR1 transregional crosstalk promoting excitatory neuronal activation
+
 
 ------------------------------------------------------------------------
 
 ## Code Organization
 
-The scripts are organized by figure to facilitate reproducibility. Each folder contains the code used to generate the corresponding panels in the manuscript.
+The scripts are organized by results to facilitate reproducibility. Each folder contains the specific analysis code used to generate the corresponding results presented in the manuscript.
 
 For example:
-- `code/Figure1/` contains scripts for Figure 1 and supplementary Figure 1.
-- `code/Figure2/` contains scripts for Figure 1 and supplementary Figure 2.
-- Subsequent folders correspond to the remaining figures.
+- `code/Result1/` contains scripts for the complete analysis and visualizations of the Result "Dissecting transregional cellular composition independent and joint-triggering epileptic effects".
+- `code/Figure2/` contains scripts for the complete analysis and visualizations of the Result "Excitatory neurons exhibit highly active state in separate epileptic regions".
+- Subsequent folders correspond to the remaining results.
 
 Users can follow these scripts to reproduce the results step by step.
 
@@ -46,36 +36,44 @@ Users can follow these scripts to reproduce the results step by step.
 
 ## Repository Structure
 
-NSCLC-DMSPsig/
+Epilepsy/
 ├── README.md
 ├── LICENSE
 ├── code/
-│   ├── Figure1/
-│   │   ├── Fig1_main.R
-│   │   └── Fig1_supplementary.R
+│   ├── Result1/
+│   │   ├── Data Processing_Hippocampus.R
+│   │   ├── Data Processing_Temporal cortex.R
+│   │   ├── DEGs_Figure1G_Hippocampus.R
+│   │   ├── DEGs_Figure1G_Temporal cortex.R
+│   │   ├── Figure1G_Temp_Hippo.R
+│   │   ├── scCODA.ipynb
+│   │   └── sccoda_data.R
 │   │
-│   ├── Figure2/
-│   │   ├── Fig2_main.R
-│   │   └── Fig2_supplementary.R
+│   ├── Result2/
+│   │   ├── Cell subpopulation re-annotation_Hoppocampus.R
+│   │   ├── Cell subpopulation re-annotation_Temporal cortex.R
+│   │   ├── Hotspot_addmodulescore.R
+│   │   ├── Hotspot_Hippocampus.ipynb
+│   │   ├── Hotspot_module_enrichment.R
+│   │   ├── hotspot_Temporal cortex.ipynb
+│   │   ├── Neuronal_activation_gene_expression.R
+│   │   ├── Neuronal_activation_Score.R
+│   │   └── Transcriptomic similarity.R
 │   │
-│   ├── Figure3/
-│   │   ├── Fig3_main.R
-│   │   └── Fig3_supplementary.R
+│   ├── Result3/
+│   │   ├── monocle3_Hippocampus.R
+│   │   └── monocle3_Temporal cortex.R
 │   │
-│   ├── Figure4/
-│   │   ├── Fig4_main.R
-│   │   └── Fig4_supplementary.R
+│   ├── Result4/
+│   │   ├── Glial_subtype.R
+│   │   └── Glial_enrichment.R
 │   │
-│   ├── Figure5/
-│   │   ├── Fig5_main.R
-│   │   └── Fig5_supplementary.R
+│   ├── Result5/
+│   │   ├── pySCENIC_Data preparation_Visualization.R
+│   │   ├── scenic.bash.R
+│   │   ├── Neuronal_activation.R
+│   │   └── Bulk RNA data processing.R
 │   │
-│   ├── Figure6/
-│   │   └── Fig6_supplementary.R
-│   │
-│   ├── Figure7/
-│   │   ├── Fig7_main.R
-│   │   └── Fig7_supplementary.R
 │
 └── sessionInfo.txt
 
@@ -85,10 +83,8 @@ NSCLC-DMSPsig/
 
 The datasets used in this study are publicly available:
 
-- Single-cell RNA-seq datasets were obtained from the Gene Expression Omnibus (GEO) database (https://www.ncbi.nlm.nih.gov/geo/), with accession numbers provided in the manuscript.
-- TCGA bulk RNA-seq data: https://portal.gdc.cancer.gov/
-- Spatial transcriptomics data: E-MTAB-13530 (EMBL-EBI)
-- Human Protein Atlas: https://www.proteinatlas.org/
+- The data that support the findings of this study are openly available in GEO at GSE160189 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE160189) and GitHub (https://github.com/khodosevichlab/Epilepsy19). 
+- Bulk RNA-seq datasets analyzed in this study, including GSE256068 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE256068), GSE139914 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139914), and GSE140393 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140393), were sourced from the Gene Expression Omnibus (GEO) database.
 
 Due to file size limitations, raw datasets are not included in this repository.
 
@@ -96,10 +92,9 @@ Due to file size limitations, raw datasets are not included in this repository.
 
 ## Requirements
 
-R = 4.4.2
+R = 4.2.2
 
-Packages: Seurat, harmony, GSVA, glmnet, CellChat, scMetabolism, decoupleR, copykat,
-infercnv, oncoPredict
+Packages: Seurat, AUCell, CBNplot, ggsankey, GOplot, ClusterGVis, clusterProfiler, jjAnno
 
 ------------------------------------------------------------------------
 
