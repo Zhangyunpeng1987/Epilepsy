@@ -95,7 +95,7 @@ Due to file size limitations, raw datasets are not included in this repository.
 
 R = 4.2.2; set.seed(123)
 
-Packages: Seurat, AUCell, CBNplot, ggsankey, GOplot, ClusterGVis, clusterProfiler, jjAnno
+Packages: Seurat, AUCell, monocle3, pySCENIC, CBNplot, ggsankey, GOplot, ClusterGVis, clusterProfiler, jjAnno
 
 ------------------------------------------------------------------------
 
