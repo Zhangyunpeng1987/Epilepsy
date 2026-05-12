@@ -47,7 +47,8 @@ Epilepsy/
 │   │   ├── DEGs_Figure1G_Temporal cortex.R
 │   │   ├── Figure1G_Temp_Hippo.R
 │   │   ├── scCODA.ipynb
-│   │   └── sccoda_data.R
+│   │   ├── sccoda_data.R
+│   │   └── kBET_validation.R
 │   │
 │   ├── Result2/
 │   │   ├── Cell subpopulation re-annotation_Hoppocampus.R
@@ -95,6 +96,7 @@ Due to file size limitations, raw datasets are not included in this repository.
 R = 4.2.2
 
 Packages: Seurat, AUCell, CBNplot, ggsankey, GOplot, ClusterGVis, clusterProfiler, jjAnno
+set.seed(123)
 
 ------------------------------------------------------------------------
 
