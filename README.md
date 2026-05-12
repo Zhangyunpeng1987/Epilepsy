@@ -93,10 +93,9 @@ Due to file size limitations, raw datasets are not included in this repository.
 
 ## Requirements
 
-R = 4.2.2
+R = 4.2.2; set.seed(123)
 
 Packages: Seurat, AUCell, CBNplot, ggsankey, GOplot, ClusterGVis, clusterProfiler, jjAnno
-set.seed(123)
 
 ------------------------------------------------------------------------
 
